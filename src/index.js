@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import Boards from './boards';
 import Board from './board';
 import Modal from './modal';
 import Library from './library';
@@ -13,8 +14,9 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="*" element={<Board />} />
-        <Route path="board" element={<Board />} />
+        <Route path="*" element={<Boards />} />
+        <Route path="boards" element={<Boards />} />
+        <Route path="board/:id" element={<Board />} />
         <Route path="modal" element={<Modal/>} />
         <Route path="library" element={<Library/>} />
       </Route>
