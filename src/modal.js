@@ -45,8 +45,9 @@ export default function Modal (props) {
 
       <input type="text" value={search} onChange={(e)=>setSearch(e.target.value)} />
       <button onClick={()=>searchPhotos()}>Search</button>
-      {true ? photos.map((u,i)=><Pexpic action={()=>addPic(u.src.medium)} key={i} url={u.src.tiny}/>) : <p>empty</p>}
-      {/*}<p>{JSON.stringify(photos[1].id)}</p>*/}
+      <div className="results">
+        {true ? photos.map((u,i)=><Pexpic action={()=>addPic(u.src.medium)} key={i} url={u.src.tiny}/>) : <p>empty</p>}
+      </div>
     </div>
   )
 }
